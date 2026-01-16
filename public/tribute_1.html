@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute - SmokeSignalSearch</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔍 SmokeSignalSearch</h1>
+            <p class="tagline">Helping reunite missing pets with their families</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-tabs">
+                <li><a href="/">Report Missing Pet</a></li>
+                <li><a href="/flyer-database.html">Flyer Database</a></li>
+                <li><a href="/search.html">Search</a></li>
+                <li><a href="/outreach.html">Outreach</a></li>
+                <li><a href="/tribute.html" class="active">Tribute</a></li>
+                <li><a href="/premium.html">Premium</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="tribute-section">
+            <h2>🕊️ Tribute Page</h2>
+            <p class="instruction">Share success stories and honor the memory of beloved pets.</p>
+            
+            <div class="tribute-tabs">
+                <button class="tab-btn active" data-tab="success">Success Stories</button>
+                <button class="tab-btn" data-tab="memorial">Memorials</button>
+            </div>
+
+            <div id="success-tab" class="tab-content active">
+                <h3>Reunited Pets - Success Stories</h3>
+                <p>Celebrate the happy endings and reunions made possible by our community.</p>
+                
+                <div class="tribute-form-card">
+                    <h4>Share Your Success Story</h4>
+                    <form id="success-form">
+                        <div class="form-group">
+                            <label for="successPetName">Pet Name</label>
+                            <input type="text" id="successPetName" name="petName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="successStory">Your Story</label>
+                            <textarea id="successStory" name="story" rows="5" required 
+                                      placeholder="Tell us about how your pet was found..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="successPhoto">Reunion Photo</label>
+                            <input type="file" id="successPhoto" name="photo" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn-primary">Share Story</button>
+                    </form>
+                </div>
+
+                <div id="success-gallery" class="tribute-gallery">
+                    <div class="tribute-card sample">
+                        <div class="tribute-image-placeholder">📷</div>
+                        <h4>Sample Success Story</h4>
+                        <p class="pet-name">Max the Golden Retriever</p>
+                        <p class="tribute-story">"Thanks to SmokeSignalSearch, we found Max after 5 days! A neighbor saw the flyer and called immediately. We're so grateful!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="memorial-tab" class="tab-content">
+                <h3>In Loving Memory</h3>
+                <p>Honor and remember cherished pets who are no longer with us.</p>
+                
+                <div class="tribute-form-card">
+                    <h4>Create a Memorial</h4>
+                    <form id="memorial-form">
+                        <div class="form-group">
+                            <label for="memorialPetName">Pet Name</label>
+                            <input type="text" id="memorialPetName" name="petName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="memorialDates">Years Together</label>
+                            <input type="text" id="memorialDates" name="dates" placeholder="e.g., 2015 - 2023">
+                        </div>
+                        <div class="form-group">
+                            <label for="memorialMessage">Memorial Message</label>
+                            <textarea id="memorialMessage" name="message" rows="5" required 
+                                      placeholder="Share your favorite memories..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="memorialPhoto">Photo</label>
+                            <input type="file" id="memorialPhoto" name="photo" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn-primary">Create Memorial</button>
+                    </form>
+                </div>
+
+                <div id="memorial-gallery" class="tribute-gallery">
+                    <div class="tribute-card sample">
+                        <div class="tribute-image-placeholder">📷</div>
+                        <h4>In Loving Memory</h4>
+                        <p class="pet-name">Buddy (2010 - 2023)</p>
+                        <p class="tribute-story">"You were the best friend anyone could ask for. Forever in our hearts. 💛"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmokeSignalSearch. Helping bring pets home.</p>
+        </div>
+    </footer>
+
+    <script src="/js/tribute.js"></script>
+</body>
+</html>

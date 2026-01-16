@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium - SmokeSignalSearch</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔍 SmokeSignalSearch</h1>
+            <p class="tagline">Helping reunite missing pets with their families</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-tabs">
+                <li><a href="/">Report Missing Pet</a></li>
+                <li><a href="/flyer-database.html">Flyer Database</a></li>
+                <li><a href="/search.html">Search</a></li>
+                <li><a href="/outreach.html">Outreach</a></li>
+                <li><a href="/tribute.html">Tribute</a></li>
+                <li><a href="/premium.html" class="active">Premium</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="premium-section">
+            <h2>⭐ Premium Services</h2>
+            <p class="instruction">Enhanced features to maximize the chances of finding your missing pet.</p>
+            
+            <div class="premium-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Priority Outreach</h3>
+                    <p>Your missing pet report is distributed first and more frequently to our network</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Extended Geographic Reach</h3>
+                    <p>Expand outreach beyond your immediate area to surrounding communities</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>SMS Alerts</h3>
+                    <p>Receive instant text notifications when someone reports a potential sighting</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Custom Flyer Design</h3>
+                    <p>Choose from premium flyer templates with eye-catching designs</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Track flyer views, shares, and engagement metrics in real-time</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3>Dedicated Support</h3>
+                    <p>Direct access to our support team for assistance and guidance</p>
+                </div>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">Free</div>
+                    <ul class="feature-list">
+                        <li>✓ Standard flyer generation</li>
+                        <li>✓ Basic outreach</li>
+                        <li>✓ Database listing</li>
+                        <li>✓ Email support</li>
+                    </ul>
+                    <button class="btn-secondary" disabled>Current Plan</button>
+                </div>
+
+                <div class="pricing-card premium">
+                    <div class="badge">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">$29<span>/month</span></div>
+                    <ul class="feature-list">
+                        <li>✓ All Basic features</li>
+                        <li>✓ Priority outreach</li>
+                        <li>✓ Extended geographic reach</li>
+                        <li>✓ SMS alerts</li>
+                        <li>✓ Custom flyer designs</li>
+                        <li>✓ Analytics dashboard</li>
+                    </ul>
+                    <button class="btn-primary" onclick="showPremiumForm()">Upgrade to Premium</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Emergency</h3>
+                    <div class="price">$99<span>/one-time</span></div>
+                    <ul class="feature-list">
+                        <li>✓ All Premium features</li>
+                        <li>✓ Immediate activation</li>
+                        <li>✓ 30-day duration</li>
+                        <li>✓ Social media campaign</li>
+                        <li>✓ Local news outreach</li>
+                        <li>✓ 24/7 priority support</li>
+                    </ul>
+                    <button class="btn-primary" onclick="showPremiumForm()">Get Emergency Service</button>
+                </div>
+            </div>
+
+            <div id="premium-signup-form" class="signup-form-container" style="display: none;">
+                <div class="signup-form-card">
+                    <h3>Sign Up for Premium</h3>
+                    <form id="premium-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        
+                        <div class="payment-info">
+                            <h4>Payment Information</h4>
+                            <p class="note">🔒 Secure payment processing via Stripe</p>
+                            <div class="form-group">
+                                <label>Card Number</label>
+                                <input type="text" placeholder="4242 4242 4242 4242" maxlength="19">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Expiry</label>
+                                    <input type="text" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVC</label>
+                                    <input type="text" placeholder="123" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Complete Payment</button>
+                            <button type="button" class="btn-secondary" onclick="hidePremiumForm()">Cancel</button>
+                        </div>
+                    </form>
+                    <p class="disclaimer">* Payment integration is in development. This is a preview of the premium signup process.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmokeSignalSearch. Helping bring pets home.</p>
+        </div>
+    </footer>
+
+    <script src="/js/premium.js"></script>
+</body>
+</html>

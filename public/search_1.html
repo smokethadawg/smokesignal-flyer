@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - SmokeSignalSearch</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔍 SmokeSignalSearch</h1>
+            <p class="tagline">Helping reunite missing pets with their families</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-tabs">
+                <li><a href="/">Report Missing Pet</a></li>
+                <li><a href="/flyer-database.html">Flyer Database</a></li>
+                <li><a href="/search.html" class="active">Search</a></li>
+                <li><a href="/outreach.html">Outreach</a></li>
+                <li><a href="/tribute.html">Tribute</a></li>
+                <li><a href="/premium.html">Premium</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="search-section">
+            <h2>Search Missing Pets</h2>
+            <p class="instruction">Search for missing pets by location, breed, name, or date.</p>
+            
+            <div class="search-filters">
+                <div class="form-group">
+                    <label for="searchAll">Search All</label>
+                    <input type="text" id="searchAll" placeholder="Search by pet name, breed, or ZIP code...">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="searchZip">ZIP Code</label>
+                        <input type="text" id="searchZip" maxlength="5" placeholder="12345">
+                    </div>
+                    <div class="form-group">
+                        <label for="searchBreed">Breed</label>
+                        <input type="text" id="searchBreed" placeholder="e.g., Cane Corso">
+                    </div>
+                    <div class="form-group">
+                        <label for="searchName">Pet Name</label>
+                        <input type="text" id="searchName" placeholder="e.g., Smoke">
+                    </div>
+                </div>
+                
+                <button id="searchBtn" class="btn-primary">Search</button>
+                <button id="clearBtn" class="btn-secondary">Clear Filters</button>
+            </div>
+            
+            <div id="search-results" class="flyers-grid">
+                <div class="no-results">Enter search criteria and click Search</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmokeSignalSearch. Helping bring pets home.</p>
+        </div>
+    </footer>
+
+    <script src="/js/search.js"></script>
+</body>
+</html>

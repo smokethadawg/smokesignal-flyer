@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer Database - SmokeSignalSearch</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔍 SmokeSignalSearch</h1>
+            <p class="tagline">Helping reunite missing pets with their families</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-tabs">
+                <li><a href="/">Report Missing Pet</a></li>
+                <li><a href="/flyer-database.html" class="active">Flyer Database</a></li>
+                <li><a href="/search.html">Search</a></li>
+                <li><a href="/outreach.html">Outreach</a></li>
+                <li><a href="/tribute.html">Tribute</a></li>
+                <li><a href="/premium.html">Premium</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="database-section">
+            <h2>Missing Pet Flyer Database</h2>
+            <p class="instruction">Browse all reported missing pets. Click on any flyer to download the full PDF.</p>
+            
+            <div id="flyers-grid" class="flyers-grid">
+                <div class="loading">Loading flyers...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmokeSignalSearch. Helping bring pets home.</p>
+        </div>
+    </footer>
+
+    <script src="/js/flyer-database.js"></script>
+</body>
+</html>

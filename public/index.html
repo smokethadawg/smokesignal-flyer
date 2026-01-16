@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmokeSignalSearch - Missing Pet Flyer & Outreach</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔍 SmokeSignalSearch</h1>
+            <p class="tagline">Helping reunite missing pets with their families</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-tabs">
+                <li><a href="/" class="active">Report Missing Pet</a></li>
+                <li><a href="/flyer-database.html">Flyer Database</a></li>
+                <li><a href="/search.html">Search</a></li>
+                <li><a href="/outreach.html">Outreach</a></li>
+                <li><a href="/tribute.html">Tribute</a></li>
+                <li><a href="/premium.html">Premium</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Report a Missing Pet</h2>
+            <p class="instruction">Fill out the form below to generate a professional flyer and initiate automated outreach.</p>
+            
+            <form id="missing-pet-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="petName">Pet Name *</label>
+                    <input type="text" id="petName" name="petName" required placeholder="Enter your pet's name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="breed">Breed *</label>
+                        <input type="text" id="breed" name="breed" required placeholder="e.g., Cane Corso, Labrador">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" id="color" name="color" placeholder="e.g., Blue/Grey, Black">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="text" id="age" name="age" placeholder="e.g., 2 years, 6 months">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select...</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateMissing">Date Missing *</label>
+                    <input type="text" id="dateMissing" name="dateMissing" required 
+                           placeholder="MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}"
+                           title="Please use MM/DD/YYYY format">
+                    <small class="form-help">Format: MM/DD/YYYY</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastSeenLocation">Last Seen Location</label>
+                    <input type="text" id="lastSeenLocation" name="lastSeenLocation" 
+                           placeholder="e.g., East Selah, near Main St and 5th Ave">
+                </div>
+
+                <div class="form-group">
+                    <label for="zipCode">ZIP Code *</label>
+                    <input type="text" id="zipCode" name="zipCode" required 
+                           pattern="\d{5}" maxlength="5"
+                           placeholder="12345"
+                           title="Please enter a valid 5-digit ZIP code">
+                    <small class="form-help">5-digit ZIP code</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="petPhoto">Pet Photo</label>
+                    <input type="file" id="petPhoto" name="petPhoto" accept="image/*">
+                    <small class="form-help">Upload a clear photo of your pet</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Additional Information</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" 
+                              placeholder="Any distinctive markings, behavior, medical conditions, or other relevant details..."></textarea>
+                </div>
+
+                <h3>Contact Information</h3>
+                
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" 
+                           pattern="[\d\s\-\(\)\+]+"
+                           placeholder="(555) 123-4567"
+                           title="Please enter a valid phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="contactEmail" 
+                           placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Generate Flyer & Start Outreach</button>
+                </div>
+
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmokeSignalSearch. Helping bring pets home.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
